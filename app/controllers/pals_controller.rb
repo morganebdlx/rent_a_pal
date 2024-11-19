@@ -1,7 +1,7 @@
 class PalsController < ApplicationController
 
   def index
-
+    @pals = Pal.all
   end
 
   def new
