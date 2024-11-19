@@ -12,7 +12,7 @@ class PalsController < ApplicationController
   def create
     @pal = Pal.new(pal_params)
     @pal.save
-    redirect_to pal_path(@path)
+    redirect_to pal_path(@pal)
   end
 
   def edit
