@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "dashboards#show"
   resources :pals do
-    resources :bookings, [:create]
+    resources :bookings, only: [:create]
   end
   resources :bookings, only: [:destroy]
   # Defines the root path route ("/")
