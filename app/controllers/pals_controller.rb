@@ -15,6 +15,10 @@ class PalsController < ApplicationController
     redirect_to pal_path(@pal)
   end
 
+  def show
+
+  end
+
   def edit
     @pal = Pal.find(params[:id])
 
@@ -39,6 +43,5 @@ class PalsController < ApplicationController
   def pal_params
     params.require(:pal).permit(:username, :age, :city, :hobby)
   end
-
 
 end
