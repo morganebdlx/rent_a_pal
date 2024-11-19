@@ -1,7 +1,7 @@
 class PalsController < ApplicationController
 
   def index
-
+    @pals = Pal.all
   end
 
   def new
@@ -13,7 +13,6 @@ class PalsController < ApplicationController
     @pal = Pal.new(pal_params)
     @pal.save
     redirect_to pal_path(@path)
-
   end
 
   def edit
