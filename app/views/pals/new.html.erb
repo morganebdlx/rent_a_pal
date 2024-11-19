@@ -1,1 +1,8 @@
 ok
+<%= simple_form_for @pal do |f| %>
+  <%= f.input :username %>
+  <%= f.input :age %>
+  <%= f.input :city %>
+  <%= f.input :hobby %>
+  <%= f.button :submit %>
+<% end %>
