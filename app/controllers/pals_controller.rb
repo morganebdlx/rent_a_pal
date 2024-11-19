@@ -12,6 +12,10 @@ class PalsController < ApplicationController
 
   end
 
+  def show
+
+  end
+
   def edit
 
   end
@@ -23,4 +27,5 @@ class PalsController < ApplicationController
   def destroy
 
   end
+
 end
