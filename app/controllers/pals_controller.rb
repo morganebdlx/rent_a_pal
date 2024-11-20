@@ -19,7 +19,7 @@ class PalsController < ApplicationController
   end
 
   def show
-
+    @pal = Pal.find(params[:id])
   end
 
   def edit

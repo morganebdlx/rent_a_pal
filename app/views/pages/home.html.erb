@@ -1,17 +1,18 @@
+<div class="container">
+ <h1 class="title">Bienvenue sur Rent-A-Pal !</h1>
 
-  <h1 class="title">Bienvenue sur Rent-A-Pal !</h1>
 
-  <div class="row justify-content-end">
-    <div class="col-4">
-      <div class="card-product">
-        <%= image_tag "Joey.png" %>
-        <div class="card-product-infos">
-          <h2>Joey</h2>
-          <p>31 ans et toutes ses dents ! <strong>relevant info</strong> only.</p>
-        </div>
+  <div class="row-home">
+
+    <% @last_pals.each do |pal| %>
+      <div class="col-6">
+
+        <%= render "pals/small_card", pal: pal %>
+
       </div>
-    </div>
-  </div>
+    <% end %>
 
-  
+  </div>
   <span style="position: absolute; bottom: 0pt; right: 0pt;">Voir plus...</span>
+</div>
+

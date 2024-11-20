@@ -1,0 +1,12 @@
+<div class="small-card-product ">
+  <%= link_to pal_path(pal), class: "small-card-link" do %>
+    <div class="d-flex justify-content-evenly">
+      <%= image_tag "avatar7.png" %>
+        <div class="small-card-product-infos">
+          <h2> <%= pal.user.username %> </h2>
+          <p><%= pal.user.age %> ans, <%= pal.user.city %></p>
+          <p><%= pal.user.hobby %></p>
+        </div>
+    </div>
+   <% end %>
+ </div>
