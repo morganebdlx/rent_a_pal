@@ -5,11 +5,11 @@
     <div class="card-product">
       <%= image_tag "avatar7.png" %>
       <div class="card-product-infos">
-        <h2>Pal's name</h2>
-        <p class="card-text">Age: </p>
-        <p class="card-text">City: </p>
-        <p class="card-text">Hobby: </p>
-        <p class="card-text">Price: </p>
+        <h2><%= @pal.user.username %></h2>
+        <p class="card-text">Age: <%= @pal.user.age %> </p>
+        <p class="card-text">City: <%= @pal.user.city %> </p>
+        <p class="card-text">Hobby: <%= @pal.user.hobby %> </p>
+        <p class="card-text">Price: <%= @pal.price %> </p>
           <div class="card-body">
             <h5 class="card-title"></h5>
             <a href="/dashboard" class="btn btn-primary mt-5">Book this Pal 😊</a>
@@ -18,27 +18,3 @@
     </div>
   </div>
 </div>
-
-
-
-<%# <div class="row">
-  <div class="col-4">
-    <div class="card-product img">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2>Username</h2>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<%# <div class="card col-sm-6 col-md-6 col-xs-6" style="width: 18rem;" class="avatar">
-  <img class="card-img-top rounded-circle me-2" src="app/assets/images/Avatar_1.png" alt="Pal_avatar">
-</div>
-
-<%# <%= link_to "Delete",
-  pal_path(@pal),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
