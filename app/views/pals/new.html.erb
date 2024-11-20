@@ -1,6 +1,20 @@
-<h2>Quel est le montant de votre prestation ?</h2>
-<%= simple_form_for @pal do |f| %>
-  <%= f.input :price %>
-  
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+
+  <div class="row center-flex">
+    <div class="col-5">
+      <div class="card-product">
+        <%= image_tag "avatar7.png" %>
+        <div class="card-product-infos">
+          <h2>Pal's name</h2>
+          <p class="card-text">Age: </p>
+          <p class="card-text">City: </p>
+          <p class="card-text">Hobby: </p>
+              <%= simple_form_for @pal, html: {class: 'pal-form' } do |f| %>
+                <%= f.input :price, :label => 'Put your price', :placeholder => 'Enter a price in €'%>
+                <%= f.button :submit, :class => 'btn btn-primary' %>
+              <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

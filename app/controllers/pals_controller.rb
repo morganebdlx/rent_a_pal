@@ -1,12 +1,6 @@
 class PalsController < ApplicationController
 
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  def configure_permitted_parameters
-    # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :age, :city, :hobby])
-    # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :age, :city, :hobby])
-  end
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @pals = Pal.all
@@ -19,6 +13,7 @@ class PalsController < ApplicationController
 
   def create
     @pal = Pal.new(pal_params)
+    @pal.user = current_user
     @pal.save
     redirect_to pal_path(@pal)
   end
@@ -49,7 +44,7 @@ class PalsController < ApplicationController
   private
 
   def pal_params
-    params.require(:pal).permit(:username, :age, :city, :hobby)
+    params.require(:pal).permit(:price)
   end
 
 end
