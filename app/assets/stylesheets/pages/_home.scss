@@ -2,4 +2,11 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: end;
+
+.bottom-text-fixed {
+  position: absolute;
+  bottom: 50pt;
+  right: 0pt;
+  text-decoration: none;
+  color: black;
 }
