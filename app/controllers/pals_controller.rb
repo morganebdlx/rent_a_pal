@@ -13,6 +13,7 @@ class PalsController < ApplicationController
 
   def create
     @pal = Pal.new(pal_params)
+    @pal.user = current_user
     @pal.save
     redirect_to pal_path(@pal)
   end
@@ -43,7 +44,7 @@ class PalsController < ApplicationController
   private
 
   def pal_params
-    params.require(:pal).permit(:username, :age, :city, :hobby)
+    params.require(:pal).permit(:price)
   end
 
 end
