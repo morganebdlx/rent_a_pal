@@ -1,9 +1,16 @@
+<div class="container">
 <h1>Liste des Pals disponible</h1>
-  <% @pals.each do |pal| %>
-    <%= link_to pal_path(pal) do %>
-      <%= pal.user.username %>
-      <%= pal.user.age %>
-      <%= pal.user.city %>
-      <%= pal.user.hobby %>
+
+
+  <div class="row">
+
+    <% @pals.each do |pal| %>
+      <div class="col-6">
+
+        <%= render "small_card", pal: pal %>
+
+      </div>
     <% end %>
-  <% end %>
+
+  </div>
+</div>
