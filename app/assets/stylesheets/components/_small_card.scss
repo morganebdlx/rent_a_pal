@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   margin: 5px;
-  padding: 5px;
+  // padding: 5px;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -20,7 +20,7 @@
 .small-card-product h2 {
   font-size: 18px;
   font-weight: bold;
-  margin: 35px;
+  margin: 50px;
 }
 
 .small-card-product p {
@@ -29,6 +29,7 @@
   opacity: .7;
   margin-bottom: 8px;
   margin-top: 8px;
+  margin-left: 10px;
 }
 
 .small-card-product .card-product-infos {

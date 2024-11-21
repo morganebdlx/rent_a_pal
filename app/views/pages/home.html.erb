@@ -1,18 +1,20 @@
-<div class="container">
- <h1 class="title">Bienvenue sur Rent-A-Pal !</h1>
+<h1 class="title center-flex">Bienvenue sur Rent-A-Pal !</h1>
 
+<div class="row">
 
-  <div class="row-home">
-
-    <% @last_pals.each do |pal| %>
-      <div class="col-6">
-
-        <%= render "pals/small_card", pal: pal %>
-
-      </div>
-    <% end %>
-
+  <div class="col-md-6">
+    <div style="width: 100%; height: 500px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
- <strong> <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %> </strong>
+
+  <div class="col-md-6">
+    <% @last_pals.each do |pal| %>
+      <%= render "pals/small_card", pal: pal %>
+    <% end %>
+    <strong> <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %> </strong>
+  </div>
 
 </div>

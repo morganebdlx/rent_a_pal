@@ -4,11 +4,16 @@ class PalsController < ApplicationController
 
   def index
     @pals = Pal.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @pals.geocoded.map do |pal| {
+        lat: pal.latitude,
+        lng: pal.longitude
+    }
+    end
   end
 
   def new
     @pal = Pal.new
-
   end
 
   def create
@@ -24,21 +29,18 @@ class PalsController < ApplicationController
 
   def edit
     @pal = Pal.find(params[:id])
-
   end
 
   def update
     @pal = Pal.find(params[:id])
     @pal.update(pal_params)
     redirect_to pal_path(@pal)
-
   end
 
   def destroy
     @pal = Pal.find(params[:id])
     @pal.destroy
     redirect_to pals_path, status: :see_other
-
   end
 
   private

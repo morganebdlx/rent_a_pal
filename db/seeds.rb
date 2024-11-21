@@ -23,6 +23,7 @@ user = User.create!(
 Pal.create!(
   price: 20,
   user: user,
+  city: 'Bordeaux'
 )
 
 user = User.create!(
@@ -30,13 +31,14 @@ user = User.create!(
   password: 'azerty',
   username: 'LeJcLeS',
   age: 34,
-  city: 'Bordeaux',
+  city: 'Nantes',
   hobby: 'Barathon'
 )
 
 Pal.create!(
   price: 20,
   user: user,
+  city: 'Nantes'
 )
 
 user = User.create!(
@@ -44,13 +46,14 @@ user = User.create!(
   password: 'azerty',
   username: 'LaitueParis',
   age: 35,
-  city: 'Bordeaux',
+  city: 'Lille',
   hobby: 'Shopping'
 )
 
 Pal.create!(
   price: 40,
   user: user,
+  city: 'Lille'
 )
 
 user = User.create!(
@@ -58,13 +61,14 @@ user = User.create!(
   password: 'azerty',
   username: 'VégéVor',
   age: 22,
-  city: 'Bordeaux',
+  city: 'Toulouse',
   hobby: 'Yoga'
 )
 
 Pal.create!(
   price: 50,
-  user: user
+  user: user,
+  city: 'Toulouse'
 )
 
 user = User.create!(
@@ -72,27 +76,29 @@ user = User.create!(
   password: 'azerty',
   username: 'momo-la-folle87',
   age: 33,
-  city: 'Bordeaux',
+  city: 'Strasbourg',
   hobby: 'Shopping'
 )
 
 Pal.create!(
   price: 50,
-  user: user
+  user: user,
+  city: 'Strasbourg'
 )
 
 user = User.create!(
   email: 'jibus33@rentapal.fr',
   password: 'azerty',
   username: 'JiBus33',
-  age: 56,
-  city: 'Bordeaux',
+  age: 35,
+  city: 'Ajaccio',
   hobby: 'Rugby'
 )
 
 Pal.create!(
   price: 30,
-  user: user
+  user: user,
+  city: 'Ajaccio'
 )
 
 user = User.create!(
@@ -100,13 +106,14 @@ user = User.create!(
   password: 'azerty',
   username: 'Titidu33',
   age: 17,
-  city: 'Bordeaux',
+  city: 'Bastia',
   hobby: 'Rugby'
 )
 
 Pal.create!(
   price: 30,
-  user: user
+  user: user,
+  city: 'Bastia'
 )
 
 user = User.create!(
@@ -114,13 +121,14 @@ user = User.create!(
   password: 'azerty',
   username: 'MaMereEnSlip',
   age: 27,
-  city: 'Bordeaux',
+  city: 'Angers',
   hobby: 'Barathon'
 )
 
 Pal.create!(
   price: 50,
-  user: user
+  user: user,
+  city: 'Angers'
 )
 
 user = User.create!(
@@ -128,13 +136,14 @@ user = User.create!(
   password: 'azerty',
   username: 'Wazaaa974',
   age: 31,
-  city: 'Bordeaux',
+  city: 'Nancy',
   hobby: 'Escalade'
 )
 
 Pal.create!(
   price: 20,
-  user: user
+  user: user,
+  city: 'Nancy'
 )
 
 user = User.create!(
@@ -142,13 +151,14 @@ user = User.create!(
   password: 'azerty',
   username: 'Modjo33',
   age: 18,
-  city: 'Bordeaux',
+  city: 'Rouen',
   hobby: 'Football'
 )
 
 Pal.create!(
   price: 40,
-  user: user
+  user: user,
+  city: 'Rouen'
 )
 
 user = User.create!(
@@ -156,13 +166,14 @@ user = User.create!(
   password: 'azerty',
   username: 'AnneCécé',
   age: 27,
-  city: 'Bordeaux',
+  city: 'Amiens',
   hobby: 'Barathon'
 )
 
 Pal.create!(
   price: 50,
-  user: user
+  user: user,
+  city: 'Amiens'
 )
 
 user = User.create!(
@@ -170,55 +181,59 @@ user = User.create!(
   password: 'azerty',
   username: 'RoroOnRails',
   age: 20,
-  city: 'Bordeaux',
+  city: 'Marseille',
   hobby: 'Box'
 )
 
 Pal.create!(
   price: 30,
-  user: user
+  user: user,
+  city: 'Marseille'
 )
 
 user = User.create!(
-  email: 'kevin1@rentapal.fr',
+  email: 'john@rentapal.fr',
   password: 'azerty',
-  username: 'Kévin1',
+  username: 'John',
   age: '36',
-  city: 'Bordeaux',
+  city: 'Brest',
   hobby: 'Barathon'
 )
 
 Pal.create!(
   price: 30,
-  user: user
+  user: user,
+  city: 'Brest'
 )
 
 user = User.create!(
-  email: 'kevin2@rentapal.fr',
+  email: 'greg@rentapal.fr',
   password: 'azerty',
-  username: 'Kévin2',
+  username: 'Greg',
   age: '22',
-  city: 'Bordeaux',
+  city: 'Rennes',
   hobby: 'Yoga'
 )
 
 Pal.create!(
   price: 60,
-  user: user
+  user: user,
+  city: 'Rennes'
 )
 
 user = User.create!(
-  email: 'kevin3@rentapal.fr',
+  email: 'alex@rentapal.fr',
   password: 'azerty',
-  username: 'Kévin3',
+  username: 'Alex',
   age: '40',
-  city: 'Bordeaux',
+  city: 'Reims',
   hobby: 'DataBase'
 )
 
 Pal.create!(
   price: 60,
-  user: user
+  user: user,
+  city: 'Reims, France'
 )
 puts 'Finished!'
 p "Created #{Pal.count} pals"
