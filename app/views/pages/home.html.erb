@@ -1,14 +1,24 @@
 <div class="container">
 
- <h1 class="title">Bienvenue sur Rent-A-Pal !</h1>
- 
+<div class="titles">
+ <h1>Bienvenue sur Rent-A-Pal</h1>
+ <h2>Des amis à louer, des souvenirs à créer.</h2>
+</div>
+
   <div class="row-home">
+
+   <div class="col-md-6">
+    <%# mapbox %>
+   </div>
+
+    <div class="col-md-6">
     <% @last_pals.each do |pal| %>
-      <div class="col-6">
+
         <%= render "pals/small_card", pal: pal %>
-      </div>
+
     <% end %>
+</div>
+     <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %>
   </div>
- <strong> <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %> </strong>
 
 </div>
