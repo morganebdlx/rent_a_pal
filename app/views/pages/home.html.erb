@@ -1,7 +1,12 @@
-<h1 class="title center-flex">Bienvenue sur Rent-A-Pal !</h1>
+<div class="container">
 
-<div class="row">
+<div class="titles">
+ <h1>Bienvenue sur Rent-A-Pal</h1>
+ <h2>Des amis à louer, des souvenirs à créer.</h2>
+</div>
 
+<div class="row-home">
+    
   <div class="col-md-6">
     <div style="width: 100%; height: 500px;"
       data-controller="map"
@@ -12,9 +17,12 @@
 
   <div class="col-md-6">
     <% @last_pals.each do |pal| %>
-      <%= render "pals/small_card", pal: pal %>
+        <%= render "pals/small_card", pal: pal %>
     <% end %>
-    <strong> <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %> </strong>
   </div>
+
+  <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %>
+  
+</div>
 
 </div>

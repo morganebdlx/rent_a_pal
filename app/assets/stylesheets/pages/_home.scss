@@ -1,13 +1,15 @@
+
 .row-home {
   display: flex;
   flex-direction: column-reverse;
   align-items: end;
+  position: relative;
 }
 
 .bottom-text-fixed {
-  // position: absolute;
-  bottom: 125pt;
-  right: 350pt;
+  position: absolute;
+  bottom: -30px;
+  right: 20px;
   text-decoration: none;
-  color: black;
+  color: #023047;
 }
