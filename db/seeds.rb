@@ -8,6 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts 'Creating pals'
+Booking.destroy_all
 Pal.destroy_all
 User.destroy_all
 
