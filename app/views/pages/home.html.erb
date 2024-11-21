@@ -6,12 +6,18 @@
 </div>
 
   <div class="row-home">
-    <% @last_pals.each do |pal| %>
-      <div class="col-6">
-        <%= render "pals/small_card", pal: pal %>
-      </div>
-    <% end %>
 
+   <div class="col-md-6">
+    <%# mapbox %>
+   </div>
+
+    <div class="col-md-6">
+    <% @last_pals.each do |pal| %>
+
+        <%= render "pals/small_card", pal: pal %>
+
+    <% end %>
+</div>
      <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %>
   </div>
 

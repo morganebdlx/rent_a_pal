@@ -1,20 +1,20 @@
-<div class="container">
+ <div class="titles"><h2>Proposer une activitée</h2>
+  </div>
 
-  <div class="row center-flex">
+ <div class="row center-flex">
     <div class="col-5">
       <div class="card-product">
         <%= image_tag "avatar7.png" %>
         <div class="card-product-infos">
-          <h2>Pal's name</h2>
-          <p class="card-text">Age: </p>
-          <p class="card-text">City: </p>
-          <p class="card-text">Hobby: </p>
+          <h2>Pals name</h2>
+           <p class="card-text">Mon age :  </p>
+           <p class="card-text">Lieu de rencontre :  </p>
+           <p class="card-text">Hobby préféré :  </p>
               <%= simple_form_for @pal, html: {class: 'pal-form' } do |f| %>
-                <%= f.input :price, :label => 'Put your price', :placeholder => 'Enter a price in €'%>
+                <%= f.input :price, :label => 'Choisir un prix', :placeholder => 'Prix en €'%>
                 <%= f.button :submit, :class => 'btn btn-primary' %>
               <% end %>
         </div>
       </div>
     </div>
   </div>
-</div>
