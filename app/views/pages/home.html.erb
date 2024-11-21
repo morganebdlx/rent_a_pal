@@ -19,9 +19,8 @@
     <% @last_pals.each do |pal| %>
         <%= render "pals/small_card", pal: pal %>
     <% end %>
+  <%=link_to "Voir plus...", pals_path, class:"center-flex" %>
   </div>
-
-  <%=link_to "Voir plus...", pals_path, class:"bottom-text-fixed" %>
 
 </div>
 
