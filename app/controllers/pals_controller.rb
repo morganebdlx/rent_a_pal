@@ -2,7 +2,7 @@ class PalsController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  def index
+  def home
     @pals = Pal.all
     # The `geocoded` scope filters only flats with coordinates
     @markers = @pals.geocoded.map do |pal| {
@@ -10,6 +10,10 @@ class PalsController < ApplicationController
         lng: pal.longitude
     }
     end
+  end
+
+  def index
+    @pals = Pal.all
   end
 
   def new
