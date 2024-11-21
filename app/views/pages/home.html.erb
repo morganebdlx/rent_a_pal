@@ -1,14 +1,11 @@
 <div class="container">
+
  <h1 class="title">Bienvenue sur Rent-A-Pal !</h1>
 
-
   <div class="row-home">
-
     <% @last_pals.each do |pal| %>
       <div class="col-6">
-
         <%= render "pals/small_card", pal: pal %>
-
       </div>
     <% end %>
 
