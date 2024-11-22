@@ -6,10 +6,18 @@
       <div class="small-card-product ">
   <%= link_to pal_path(palbooking.user), class: "small-card-link" do %>
     <div class="d-flex justify-content-evenly">
+      
+      <% if palbooking.user.photo.attached? %>
+             <%= cl_image_tag palbooking.user.photo.key, class: "avatar", alt: "" %>
+             <% else %>
+             <%= image_tag "photopardefaut.png", class: "avatar", alt: "" %>
+           <% end %>
+
         <div class="small-card-product-infos">
           <h2> <%= palbooking.user.username %> </h2>
           <p><%= palbooking.user.age %> ans, <%= palbooking.user.city %></p>
           <p><%= palbooking.user.hobby %></p>
+
         </div>
     </div>
    <% end %>
@@ -19,7 +27,7 @@
     <div class="col-6">
      <div class="titles"><h2>Mes demandes envoyées</h2></div>
       <% @bookings.each do |booking| %>
-      <%= render "pals/small_card", pal: booking.pal %>
+      <%= render "pals/small_card", pal: booking.pal, booking:booking %>
       <% end %>
     </div>
 
