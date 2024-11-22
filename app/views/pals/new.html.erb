@@ -4,7 +4,11 @@
  <div class="row center-flex">
     <div class="col-5">
       <div class="card-product">
-        <%= image_tag "avatar7.png" %>
+        <% if current_user.photo.attached? %>
+             <%= cl_image_tag current_user.photo.key, class: "avatar", alt: "" %>
+             <% else %>
+             <%= image_tag "photopardefaut.png", class: "avatar", alt: "" %>
+           <% end %>
         <div class="card-product-infos">
           <h2><%= current_user.username %></h2>
            <p class="card-text">Âge : <%= current_user.age %> ans</p>

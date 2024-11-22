@@ -24,16 +24,16 @@
   }
 }
 
-.small-card-product img {
+.small-card-product .avatar {
   height: 100%;
-  width: 250px;
+  width: 160px;
   object-fit: cover;
 }
 
 .small-card-product h2 {
   font-size: 18px;
   font-weight: bold;
-  margin: 50px;
+  margin: 30px;
 }
 
 .small-card-product p {
