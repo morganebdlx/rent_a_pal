@@ -14,6 +14,10 @@ class PalsController < ApplicationController
 
   def index
     @pals = Pal.all
+    if params[:query].present?
+      @pals = @pals.joins(:user).where("pals.city ILIKE ? OR users.hobby ILIKE ?", params[:query], params[:query])
+
+    end
   end
 
   def new
