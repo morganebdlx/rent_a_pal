@@ -21,9 +21,6 @@
                 <%= f.input :start_date, :label => "Début",
                 as: :string,
             input_html: { data: { controller: "flatpicker" } } %>
-                <%= f.input :end_date,  :label => "Fin",
-                as: :string,
-            input_html: { data: { controller: "flatpicker" } } %>
                 <%= f.submit "Book this pal", :class => 'btn btn-primary mt-5' %>
             <% end %>
           </div>
