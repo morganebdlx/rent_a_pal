@@ -13,7 +13,15 @@
         <p class="card-text">Prix : <%= @pal.price %> €</p>
           <div class="card-body">
             <h5 class="card-title"></h5>
-            <a href="/dashboard" class="btn btn-primary mt-5">Book this Pal 😊</a>
+            <%= simple_form_for [@pal, @booking] do |f| %>
+                <%= f.input :start_date, :label => "Début",
+                as: :string,
+            input_html: { data: { controller: "flatpicker" } } %>
+                <%= f.input :end_date,  :label => "Fin",
+                as: :string,
+            input_html: { data: { controller: "flatpicker" } } %>
+                <%= f.submit "Book this pal", :class => 'btn btn-primary mt-5' %>
+            <% end %>
           </div>
       </div>
     </div>

@@ -33,6 +33,7 @@ class PalsController < ApplicationController
 
   def show
     @pal = Pal.find(params[:id])
+    @booking = Booking.new
   end
 
   def edit
