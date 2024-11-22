@@ -15,6 +15,7 @@
           <h2> <%= palbooking.user.username %> </h2>
           <p><%= palbooking.user.age %> ans, <%= palbooking.user.city %></p>
           <p><%= palbooking.user.hobby %></p>
+
         </div>
     </div>
    <% end %>
@@ -24,7 +25,7 @@
     <div class="col-6">
      <div class="titles"><h2>Mes demandes envoyées</h2></div>
       <% @bookings.each do |booking| %>
-      <%= render "pals/small_card", pal: booking.pal %>
+      <%= render "pals/small_card", pal: booking.pal, booking:booking %>
       <% end %>
     </div>
 

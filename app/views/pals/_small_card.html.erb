@@ -10,6 +10,9 @@
           <h2> <%= pal.user.username %> </h2>
           <p><%= pal.user.age %> ans, <%= pal.user.city %></p>
           <p><%= pal.user.hobby %></p>
+            <% if (params[:controller] == "dashboards") %>
+            <%= link_to "Supprimer", booking_path(booking),:class => 'btn btn-primary', data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?"}%>
+            <% end %>
         </div>
     </div>
    <% end %>
