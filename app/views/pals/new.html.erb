@@ -1,4 +1,4 @@
- <div class="titles"><h2>Proposer une activitée</h2>
+ <div class="titles"><h2>Proposer une activité</h2>
   </div>
 
  <div class="row center-flex">
@@ -10,10 +10,10 @@
              <%= image_tag "photopardefaut.png", class: "avatar", alt: "" %>
            <% end %>
         <div class="card-product-infos">
-          <h2>Pals name</h2>
-           <p class="card-text">Mon age :  </p>
-           <p class="card-text">Lieu de rencontre :  </p>
-           <p class="card-text">Hobby préféré :  </p>
+          <h2><%= current_user.username %></h2>
+           <p class="card-text">Âge : <%= current_user.age %> ans</p>
+           <p class="card-text">Ville : <%= current_user.city %> </p>
+           <p class="card-text">Hobby : <%= current_user.hobby %> </p>
               <%= simple_form_for @pal, html: {class: 'pal-form' } do |f| %>
                 <%= f.input :price, :label => 'Choisir un prix', :placeholder => 'Prix en €'%>
                 <%= f.button :submit, :class => 'btn btn-primary' %>

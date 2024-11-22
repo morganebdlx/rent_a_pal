@@ -16,8 +16,9 @@ user = User.new(
   password: 'azerty',
   username: 'YadelaJoie',
   age: 25,
-  city: 'Bordeaux',
+  city: 'Ajaccio',
   hobby: 'Boxe'
+
 )
 
 file = File.open("app/assets/images/avatar4.png")
@@ -27,7 +28,7 @@ user.save!
 Pal.create!(
   price: 20,
   user: user,
-  city: 'Bordeaux'
+  city: 'Ajaccio'
 )
 
 user = User.create!(
@@ -109,9 +110,9 @@ Pal.create!(
 user = User.create!(
   email: 'jibus33@rentapal.fr',
   password: 'azerty',
-  username: 'JiBus33',
+  username: 'Jibus33',
   age: 35,
-  city: 'Ajaccio',
+  city: 'Bordeaux',
   hobby: 'Rugby'
 )
 
@@ -122,7 +123,7 @@ user.save!
 Pal.create!(
   price: 30,
   user: user,
-  city: 'Ajaccio'
+  city: 'Bordeaux'
 )
 
 user = User.create!(
