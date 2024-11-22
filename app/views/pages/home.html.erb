@@ -2,13 +2,13 @@
 
 <div class="titles">
  <h1>Bienvenue sur Rent-A-Pal</h1>
- <h2>Des amis à louer, des souvenirs à créer.</h2>
+ <h2>Des amis à louer, des souvenirs à créer</h2>
 </div>
 
 <div class="row">
 
-  <div class="col-md-6">
-    <div style="width: 100%; height: 500px;"
+  <div class="col-md-6 mt-6">
+    <div class="br-15" style="width: 100%; height: 550px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

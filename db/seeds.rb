@@ -16,14 +16,14 @@ user = User.create!(
   password: 'azerty',
   username: 'YadelaJoie',
   age: 25,
-  city: 'Bordeaux',
+  city: 'Ajaccio',
   hobby: 'Box'
 )
 
 Pal.create!(
   price: 20,
   user: user,
-  city: 'Bordeaux'
+  city: 'Ajaccio'
 )
 
 user = User.create!(
@@ -89,16 +89,16 @@ Pal.create!(
 user = User.create!(
   email: 'jibus33@rentapal.fr',
   password: 'azerty',
-  username: 'JiBus33',
+  username: 'Jibus33',
   age: 35,
-  city: 'Ajaccio',
+  city: 'Bordeaux',
   hobby: 'Rugby'
 )
 
 Pal.create!(
   price: 30,
   user: user,
-  city: 'Ajaccio'
+  city: 'Bordeaux'
 )
 
 user = User.create!(
@@ -196,14 +196,14 @@ user = User.create!(
   password: 'azerty',
   username: 'John',
   age: '36',
-  city: 'Brest',
+  city: 'Vannes',
   hobby: 'Barathon'
 )
 
 Pal.create!(
   price: 30,
   user: user,
-  city: 'Brest'
+  city: 'Vannes'
 )
 
 user = User.create!(
@@ -235,5 +235,6 @@ Pal.create!(
   user: user,
   city: 'Reims, France'
 )
+
 puts 'Finished!'
 p "Created #{Pal.count} pals"
