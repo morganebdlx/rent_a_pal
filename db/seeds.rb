@@ -11,14 +11,18 @@ puts 'Creating pals'
 Pal.destroy_all
 User.destroy_all
 
-user = User.create!(
+user = User.new(
   email: 'yadelajoie@rentapal.fr',
   password: 'azerty',
   username: 'YadelaJoie',
   age: 25,
   city: 'Bordeaux',
-  hobby: 'Box'
+  hobby: 'Boxe'
 )
+
+file = File.open("app/assets/images/avatar4.png")
+user.photo.attach(io: file, filename: "avatar4.png", content_type: "image/png")
+user.save!
 
 Pal.create!(
   price: 20,
@@ -35,6 +39,10 @@ user = User.create!(
   hobby: 'Barathon'
 )
 
+file = File.open("app/assets/images/avatar6.png")
+user.photo.attach(io: file, filename: "avatar6.png", content_type: "image/png")
+user.save!
+
 Pal.create!(
   price: 20,
   user: user,
@@ -49,6 +57,10 @@ user = User.create!(
   city: 'Lille',
   hobby: 'Shopping'
 )
+
+file = File.open("app/assets/images/avatar3.png")
+user.photo.attach(io: file, filename: "avatar3.png", content_type: "image/png")
+user.save!
 
 Pal.create!(
   price: 40,
@@ -65,6 +77,10 @@ user = User.create!(
   hobby: 'Yoga'
 )
 
+file = File.open("app/assets/images/avatar6.png")
+user.photo.attach(io: file, filename: "avatar6.png", content_type: "image/png")
+user.save!
+
 Pal.create!(
   price: 50,
   user: user,
@@ -79,6 +95,10 @@ user = User.create!(
   city: 'Strasbourg',
   hobby: 'Shopping'
 )
+
+file = File.open("app/assets/images/avatar6.png")
+user.photo.attach(io: file, filename: "avatar6.png", content_type: "image/png")
+user.save!
 
 Pal.create!(
   price: 50,
@@ -95,6 +115,10 @@ user = User.create!(
   hobby: 'Rugby'
 )
 
+file = File.open("app/assets/images/avatar2.png")
+user.photo.attach(io: file, filename: "avatar2.png", content_type: "image/png")
+user.save!
+
 Pal.create!(
   price: 30,
   user: user,
@@ -109,6 +133,10 @@ user = User.create!(
   city: 'Bastia',
   hobby: 'Rugby'
 )
+
+file = File.open("app/assets/images/avatar3.png")
+user.photo.attach(io: file, filename: "avatar3.png", content_type: "image/png")
+user.save!
 
 Pal.create!(
   price: 30,
@@ -125,6 +153,10 @@ user = User.create!(
   hobby: 'Barathon'
 )
 
+file = File.open("app/assets/images/avatar4.png")
+user.photo.attach(io: file, filename: "avatar4.png", content_type: "image/png")
+user.save!
+
 Pal.create!(
   price: 50,
   user: user,
@@ -139,6 +171,10 @@ user = User.create!(
   city: 'Nancy',
   hobby: 'Escalade'
 )
+
+file = File.open("app/assets/images/avatar2.png")
+user.photo.attach(io: file, filename: "avatar2.png", content_type: "image/png")
+user.save!
 
 Pal.create!(
   price: 20,
@@ -155,6 +191,10 @@ user = User.create!(
   hobby: 'Football'
 )
 
+file = File.open("app/assets/images/avatar3.png")
+user.photo.attach(io: file, filename: "avatar3.png", content_type: "image/png")
+user.save!
+
 Pal.create!(
   price: 40,
   user: user,
@@ -170,6 +210,10 @@ user = User.create!(
   hobby: 'Barathon'
 )
 
+file = File.open("app/assets/images/avatar2.png")
+user.photo.attach(io: file, filename: "avatar2.png", content_type: "image/png")
+user.save!
+
 Pal.create!(
   price: 50,
   user: user,
@@ -182,8 +226,12 @@ user = User.create!(
   username: 'RoroOnRails',
   age: 20,
   city: 'Marseille',
-  hobby: 'Box'
+  hobby: 'Boxe'
 )
+
+file = File.open("app/assets/images/avatar4.png")
+user.photo.attach(io: file, filename: "avatar4.png", content_type: "image/png")
+user.save!
 
 Pal.create!(
   price: 30,
@@ -191,49 +239,5 @@ Pal.create!(
   city: 'Marseille'
 )
 
-user = User.create!(
-  email: 'john@rentapal.fr',
-  password: 'azerty',
-  username: 'John',
-  age: '36',
-  city: 'Brest',
-  hobby: 'Barathon'
-)
-
-Pal.create!(
-  price: 30,
-  user: user,
-  city: 'Brest'
-)
-
-user = User.create!(
-  email: 'greg@rentapal.fr',
-  password: 'azerty',
-  username: 'Greg',
-  age: '22',
-  city: 'Rennes',
-  hobby: 'Yoga'
-)
-
-Pal.create!(
-  price: 60,
-  user: user,
-  city: 'Rennes'
-)
-
-user = User.create!(
-  email: 'alex@rentapal.fr',
-  password: 'azerty',
-  username: 'Alex',
-  age: '40',
-  city: 'Reims',
-  hobby: 'DataBase'
-)
-
-Pal.create!(
-  price: 60,
-  user: user,
-  city: 'Reims, France'
-)
 puts 'Finished!'
 p "Created #{Pal.count} pals"
