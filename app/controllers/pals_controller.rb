@@ -28,7 +28,7 @@ class PalsController < ApplicationController
     @pal = Pal.new(pal_params)
     @pal.user = current_user
     @pal.save
-    redirect_to pal_path(@pal)
+    redirect_to root_path
   end
 
   def show

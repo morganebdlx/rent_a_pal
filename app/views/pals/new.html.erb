@@ -16,7 +16,7 @@
            <p class="card-text">Hobby : <%= current_user.hobby %> </p>
               <%= simple_form_for @pal, html: {class: 'pal-form' } do |f| %>
                 <%= f.input :price, :label => 'Choisir un prix', :placeholder => 'Prix en €'%>
-                <%= f.button :submit, :class => 'btn btn-primary' %>
+                <%= f.submit "Louez Moi", :class => 'btn btn-primary' %>
               <% end %>
         </div>
       </div>
